@@ -5,14 +5,6 @@ export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://technet-server-mauve.vercel.app/',
   }),
-  endpoints: (builder) => ({
-    getProducts: builder.query({
-      query: () => '/products',
-    }),
-    singleProduct: builder.query({
-      query: (id) => `/product/${id}`,
-    }),
-  }),
+  tagTypes: ['comments'],
+  endpoints: () => ({}),
 });
-
-export const { useGetProductsQuery, useSingleProductQuery } = api;
