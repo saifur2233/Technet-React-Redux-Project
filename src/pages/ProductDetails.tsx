@@ -7,6 +7,8 @@ export default function ProductDetails() {
   const { id } = useParams();
 
   const { data: product, isLoading, error } = useSingleProductQuery(id);
+  console.log(isLoading);
+  console.log(error);
   //! Temporary code, should be replaced with redux
   // const [data, setData] = useState<IProduct[]>([]);
   // useEffect(() => {
